@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yom {
+  max-width: 100%;
+  background-color: #fff;
+  display: flex;
+  font-size: 16px;
+  user-select: none;
+
+  .cover {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 5.6em;
+    height: 5.6em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .info {
+    padding: 0.6em 0.7em;
+    flex: 1 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    flex: 0 0;
+  }
+  .artist {
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  .lrc {
+    flex: 1 1;
+  }
+
+  .progress {
+    flex: 0 0;
+    display: flex;
+    align-items: center;
+  }
+  .skidway {
+    min-width: 16em;
+    height: 2px;
+    position: relative;
+    margin-right: 0.4em;
+    background-color: #ccc;
+  }
+  .played {
+    width: 0;
+    height: 100%;
+    background-color: red;
+    transition: width 0.1s ease-in-out;
+  }
+  .slider {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: pink;
+    position: absolute;
+    top: -3px;
+    left: -4px;
+    z-index: 999;
+    transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: red;
+    }
+  }
+
+  .time {
+    font-size: 0.6em;
+    color: #666;
+  }
+}
